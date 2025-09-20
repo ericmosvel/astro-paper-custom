@@ -7,7 +7,7 @@
     "root": "src/data/blog"
   },
   "code": {
-    "root": "src/components"
+    "root": "src"
   },
   "themeConfig": [
     "package.json",
