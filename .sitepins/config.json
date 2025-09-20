@@ -1,0 +1,18 @@
+{
+  "media": {
+    "root": "src/assets",
+    "public": "src/assets"
+  },
+  "content": {
+    "root": "src/data/blog"
+  },
+  "code": {
+    "root": "src/components"
+  },
+  "themeConfig": [
+    "package.json",
+    "tsconfig.json"
+  ],
+  "arrangement": [],
+  "showCommitModal": false
+}
