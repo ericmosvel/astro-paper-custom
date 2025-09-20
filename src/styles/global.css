@@ -4,16 +4,14 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root,
-html[data-theme="light"] {
-  --background: #fdfdfd;
+html[data-theme="light"] {  
   --foreground: #282728;
   --accent: #006cac;
   --muted: #e6e6e6;
   --border: #ece9e9;
 }
 
-html[data-theme="dark"] {
-  --background: #212737;
+html[data-theme="dark"] {   
   --foreground: #eaedf3;
   --accent: #ff6b01;
   --muted: #343f60;
@@ -28,6 +26,20 @@ html[data-theme="dark"] {
   --color-border: var(--border);
 }
 
+
+:root,
+html[data-theme="light"] {
+  --background: linear-gradient(120deg, #fdfbfb, #ebedee);
+}
+
+html[data-theme="dark"] {
+  --background: radial-gradient(
+    ellipse at top center,   /* el "resplandor" nace arriba al centro */
+    #1c1f39 0%,              /* tono azul claro al inicio */
+    #0d1021 70%              /* se funde en azul oscuro */
+  );
+}
+
 @layer base {
   * {
     @apply border-border outline-accent/75;
@@ -35,10 +47,12 @@ html[data-theme="dark"] {
     scrollbar-color: var(--color-muted) transparent;
   }
   html {
+    background: var(--background);
     @apply overflow-y-scroll scroll-smooth;
   }
   body {
-    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    background-color: transparent; /* fallback light */   
+    @apply flex min-h-svh flex-col font-mono text-foreground selection:bg-accent/75 selection:text-background;
   }
   a,
   button {

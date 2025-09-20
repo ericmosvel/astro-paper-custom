@@ -93,6 +93,8 @@ const nextPost =
     ]}
     data-pagefind-body
   >
+  
+  <!-- TITLE ZONE -->
     <h1
       transition:name={slugifyStr(title)}
       class="inline-block text-2xl font-bold text-accent sm:text-3xl"
@@ -109,7 +111,8 @@ const nextPost =
         ]}>|</span
       >
       <EditPost {hideEditPost} {post} class="max-sm:hidden" />
-    </div>
+    </div>    
+    <!-- article zone -->
     <article
       id="article"
       class="app-prose mx-auto mt-8 max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
